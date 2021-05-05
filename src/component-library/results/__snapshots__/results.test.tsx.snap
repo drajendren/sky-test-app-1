@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Results /> it should display correct results 1`] = `
+<body>
+  <div>
+    <div
+      class="resultRow filterContainer"
+    >
+      Filter Results:
+      <select
+        class="filterSelect"
+        id="resultFilter"
+        name="filter"
+      >
+        <option
+          value="Movies"
+        >
+          Movies
+        </option>
+        <option
+          value="Tv"
+        >
+          TV shows
+        </option>
+        <option
+          value="Person"
+        >
+          People
+        </option>
+        <option
+          value="All"
+        >
+          All
+        </option>
+      </select>
+    </div>
+    <div
+      class="searchResultsContainer"
+    >
+      <div
+        class="resultRow"
+      >
+        <a
+          class="link"
+          href="/22"
+        >
+          <button
+            class="resultContainer"
+          >
+            Pirates of the Caribbean: The Curse of the Black Pearl
+          </button>
+        </a>
+      </div>
+      <div
+        class="resultRow"
+      >
+        <a
+          class="link"
+          href="/1668"
+        >
+          <button
+            class="resultContainer"
+          >
+             
+            Friends
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+`;

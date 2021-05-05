@@ -1,9 +1,8 @@
-// import React, { useEffect } from 'react';
 import React, { useEffect, useState } from "react";
+import { ResultContainer } from "..";
 import Movie from "../../interfaces/Movie";
 import Person from "../../interfaces/Person";
 import TvShow from "../../interfaces/TvShow";
-import ResultContainer from "../result-container/result-container";
 import styles from "./results.module.scss";
 
 export interface ResultsProps {
@@ -36,7 +35,7 @@ export const Results = (props: ResultsProps) => {
   return (
     <>
       <div className={`${styles.resultRow} ${styles.filterContainer}`}>
-        Filter Results: 
+        Filter Results:
         <select
           name="filter"
           id="resultFilter"

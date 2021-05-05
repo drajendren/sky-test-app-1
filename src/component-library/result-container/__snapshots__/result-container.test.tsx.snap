@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ResultContainer /> it should display correct result 1`] = `
+<body>
+  <div>
+    <a
+      class="link"
+      href="/123"
+    >
+      <button
+        class="resultContainer"
+      >
+         
+        test Person
+      </button>
+    </a>
+  </div>
+</body>
+`;

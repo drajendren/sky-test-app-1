@@ -1,12 +1,15 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Route, Switch, useHistory } from "react-router-dom";
+import axios from "axios";
 import "./App.scss";
-import DetailsPage from "./component-library/details-page/details-page";
-import PageTitle from "./component-library/page-title/page-title";
-import Results from "./component-library/results/results";
-import SearchBar from "./component-library/search-bar/search-bar";
+import config from "./config";
 import { SearchResponse } from "./interfaces/SearchResponse";
+import { Route, Switch, useHistory } from "react-router-dom";
+import {
+  DetailsPage,
+  PageTitle,
+  Results,
+  SearchBar,
+} from "./component-library";
 
 function App() {
   const [searchResponse, setSearchResponse] = useState({} as SearchResponse);
@@ -14,14 +17,16 @@ function App() {
   const [error, setError] = useState("");
   const [searchValue, setSearchValue] = useState("");
   const history = useHistory();
-  //Autosuggest
-  const [searchSuggestionResponse, setSearchSuggestionResponse] = useState({} as SearchResponse);
-
+  const [searchSuggestionResponse, setSearchSuggestionResponse] = useState(
+    {} as SearchResponse
+  );
 
   const multiSearchApi = () => {
     axios
       .get<SearchResponse>(
-        `https://api.themoviedb.org/3/search/multi?api_key=60208f0804976a80f0b8a726de9c6147&language=en-US&query=${encodeURIComponent(
+        `${config.baseUrl}search/multi?api_key=${
+          config.apiKey
+        }&language=en-US&query=${encodeURIComponent(
           searchValue
         )}&page=1&include_adult=true`,
         {
@@ -56,8 +61,7 @@ function App() {
     } else {
       setSearchSuggestionResponse({} as SearchResponse);
     }
-  }, [
-    searchValue]);
+  }, [searchValue]);
 
   return (
     <div className="App">
@@ -75,13 +79,10 @@ function App() {
           ) : searchResponse.total_results > 0 && !error ? (
             <Results results={searchResponse.results} />
           ) : error ? (
-            <div>{error}</div>
+            <div data-testid="searchError">{error}</div>
           ) : null}
-          {/* <DetailsPage id={result.id} /> */}
         </Route>
         <Route path="/:id" render={() => <DetailsPage />}></Route>
-        {/* <DetailsPage /> */}
-        {/* </Route> */}
       </Switch>
     </div>
   );

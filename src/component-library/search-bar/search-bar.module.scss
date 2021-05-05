@@ -1,26 +1,26 @@
 .searchBarContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.searchInputBox{
-    margin-right: 10px;
-    height: 30px;
-    width: 400px;
-    font-family: courier;
+.searchInputBox {
+  margin-right: 10px;
+  height: 30px;
+  width: 400px;
+  font-family: courier;
 }
 .searchButton {
-    height: 30px;
-    width: 80px;
+  height: 30px;
+  width: 80px;
 }
 .suggestionsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100px;
-    overflow: scroll;
-    overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 .resultRow {
-    width: 33%;
+  width: 33%;
 }

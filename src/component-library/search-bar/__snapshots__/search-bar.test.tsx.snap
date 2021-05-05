@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchBar /> It should render correctly 1`] = `
+<body>
+  <div>
+    <div>
+      <div
+        class="searchBarContainer"
+      >
+        <div
+          class="autoComplete"
+        >
+          <input
+            class="searchInputBox"
+            type="text"
+            value="harry potter and the goble"
+          />
+        </div>
+        <button
+          class="searchButton"
+          data-testid="searchButton"
+        >
+          Search
+        </button>
+      </div>
+      <h4
+        data-testid="suggestedSearch"
+      >
+        Suggested searches
+      </h4>
+      <div
+        class="suggestionsContainer"
+      >
+        <div
+          class="resultRow"
+          data-testid="search_suggestion_0"
+        >
+          <a
+            class="link"
+            href="/674"
+          >
+            <button
+              class="searchSuggestions"
+            >
+              Harry Potter and the Goblet of Fire
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

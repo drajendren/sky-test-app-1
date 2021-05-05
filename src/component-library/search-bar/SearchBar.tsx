@@ -1,7 +1,6 @@
-// import React, { useEffect } from 'react';
 import React from "react";
+import { ResultContainer } from "..";
 import SearchResponse from "../../interfaces/SearchResponse";
-import ResultContainer from "../result-container/result-container";
 import styles from "./search-bar.module.scss";
 export interface SearchBarProps {
   searchSuggestion: SearchResponse;
@@ -35,7 +34,7 @@ export const SearchBar = (props: SearchBarProps) => {
           />
         </div>
         <button
-          data-testid="searchBar"
+          data-testid="searchButton"
           className={styles.searchButton}
           onClick={handleClick}
         >
@@ -44,20 +43,25 @@ export const SearchBar = (props: SearchBarProps) => {
       </div>
       {searchSuggestion.results ? (
         <>
-        <h4>Suggested searches</h4>
-        <div className={styles.suggestionsContainer}>
-          {searchSuggestion?.results?.map((searchSuggestion, index) => {
-            return (
-              <div key={index} className={styles.resultRow}>
-                <ResultContainer className={'searchSuggestions'} resultsObject={searchSuggestion} />
-              </div>
-            );
-          })}
-        </div>
-      </>
-      ) : (
-        null
-      )}
+          <h4 data-testid="suggestedSearch">Suggested searches</h4>
+          <div className={styles.suggestionsContainer}>
+            {searchSuggestion?.results?.map((searchSuggestion, index) => {
+              return (
+                <div
+                  data-testid={`search_suggestion_${index}`}
+                  key={index}
+                  className={styles.resultRow}
+                >
+                  <ResultContainer
+                    className={"searchSuggestions"}
+                    resultsObject={searchSuggestion}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </>
+      ) : null}
     </div>
   );
 };

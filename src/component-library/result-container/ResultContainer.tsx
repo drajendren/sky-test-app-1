@@ -1,4 +1,3 @@
-// import React, { useEffect } from 'react';
 import React from "react";
 import { Link } from "react-router-dom";
 import Movie from "../../interfaces/Movie";
@@ -13,19 +12,23 @@ export interface ResultsContainerProps {
 
 export const ResultContainer = (props: ResultsContainerProps) => {
   const resultsObject = props.resultsObject;
-  const customClassName = props.className || 'resultContainer';
+  const customClassName = props.className || "resultContainer";
   return (
     <Link
       className={styles.link}
       to={{
         pathname: `/${resultsObject.id}`,
         state: { props: resultsObject },
-      }}>
+      }}
+    >
       <button className={styles[customClassName]}>
-        {resultsObject.media_type === 'tv'? <> {(resultsObject as TvShow).name}</>  : null
-          || resultsObject.media_type === 'movie'? <>{(resultsObject as Movie).title}</> : null
-          || resultsObject.media_type === 'person'? <> {(resultsObject as Person).name}</> : null
-        }
+        {resultsObject.media_type === "tv" ? (
+          <> {(resultsObject as TvShow).name}</>
+        ) : null || resultsObject.media_type === "movie" ? (
+          <>{(resultsObject as Movie).title}</>
+        ) : null || resultsObject.media_type === "person" ? (
+          <> {(resultsObject as Person).name}</>
+        ) : null}
       </button>
     </Link>
   );

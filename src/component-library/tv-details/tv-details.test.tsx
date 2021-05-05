@@ -1,14 +1,14 @@
-// import React from 'react';
-// import { render, screen } from '@testing-library/react';
-// import '@testing-library/jest-dom/extend-expect';
-// import SearchBar from './search-bar';
+import React from "react";
+import { render } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
+import { detailsPageData } from "../../test-data/test-data";
+import TvDetails from "./TvDetails";
 
-// describe('<Search-bar />', () => {
-//   test('it should mount', () => {
-//     render(<SearchBar />);
-    
-//     const searchBar = screen.getByTestId('Search-bar');
-
-//     expect(searchBar).toBeInTheDocument();
-//   });
-// });
+describe("<TvDetails />", () => {
+  test("It should display tv show details", () => {
+    const { baseElement } = render(
+      <TvDetails details={detailsPageData.props} />
+    );
+    expect(baseElement).toMatchSnapshot();
+  });
+});

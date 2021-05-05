@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieDetails /> It should display movie details 1`] = `
+<body>
+  <div>
+    <h2>
+      Movie Details
+    </h2>
+    <h3>
+      Name
+    </h3>
+    <div>
+      The Lord of the Rings: The Two Towers
+    </div>
+    <h3>
+      Genre
+    </h3>
+    <div>
+      Adventure, Fantasy, Action
+    </div>
+    <h3>
+      Overview
+    </h3>
+    <div
+      class="overview"
+    >
+       
+      Frodo and Sam are trekking to Mordor to destroy the One Ring of Power while Gimli, Legolas and Aragorn search for the orc-captured Merry and Pippin. All along, nefarious wizard Saruman awaits the Fellowship members at the Orthanc Tower in Isengard.
+    </div>
+    <h3>
+      Release Date
+    </h3>
+    <div>
+      2002-12-18
+    </div>
+    <img
+      alt=""
+      height="200px"
+      src="https://image.tmdb.org/t/p/w500/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg"
+    />
+  </div>
+</body>
+`;

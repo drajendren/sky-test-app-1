@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DetailsPage /> it should display correct details page from state 1`] = `
+<body>
+  <div>
+    <div>
+      <h2>
+        Tv show Details
+      </h2>
+      <h3>
+        Name
+      </h3>
+      <div>
+        The Real Adventures of Jonny Quest
+      </div>
+      <h3>
+        Genre
+      </h3>
+      <div>
+        Animation
+      </div>
+      <h3>
+        Overview
+      </h3>
+      <div
+        class="overview"
+      >
+         
+        The Real Adventures of Jonny Quest is an American animated action-adventure television series.
+      </div>
+      <h3>
+        First Aired
+      </h3>
+      <div>
+        1996-08-26
+      </div>
+      <img
+        alt=""
+        height="200px"
+        src="https://image.tmdb.org/t/p/w500/vx8KdVNOpHVBR0x30shg5kcGnd7.jpg"
+      />
+    </div>
+  </div>
+</body>
+`;

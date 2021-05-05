@@ -1,14 +1,12 @@
-// import React from 'react';
-// import { render, screen } from '@testing-library/react';
-// import '@testing-library/jest-dom/extend-expect';
-// import SearchBar from './search-bar';
+import React from "react";
+import { render } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
+import { movieDetails } from "../../test-data/test-data";
+import { MovieDetails } from "..";
 
-// describe('<Search-bar />', () => {
-//   test('it should mount', () => {
-//     render(<SearchBar />);
-    
-//     const searchBar = screen.getByTestId('Search-bar');
-
-//     expect(searchBar).toBeInTheDocument();
-//   });
-// });
+describe("<MovieDetails />", () => {
+  test("It should display movie details", () => {
+    const { baseElement } = render(<MovieDetails details={movieDetails} />);
+    expect(baseElement).toMatchSnapshot();
+  });
+});
