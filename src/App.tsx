@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import "./App.scss";
 import config from "./config";
-import { SearchResponse } from "./interfaces/SearchResponse";
 import { Route, Switch, useHistory } from "react-router-dom";
 import {
   DetailsPage,
@@ -10,6 +9,7 @@ import {
   Results,
   SearchBar,
 } from "./component-library";
+import { SearchResponse } from "./interfaces";
 
 function App() {
   const [searchResponse, setSearchResponse] = useState({} as SearchResponse);

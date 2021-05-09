@@ -1,6 +1,6 @@
 import React from "react";
 import { ResultContainer } from "..";
-import SearchResponse from "../../interfaces/SearchResponse";
+import { SearchResponse } from "../../interfaces";
 import styles from "./search-bar.module.scss";
 export interface SearchBarProps {
   searchSuggestion: SearchResponse;

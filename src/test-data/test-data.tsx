@@ -1,5 +1,5 @@
-import Movie from "../interfaces/Movie";
-import TvShow from "../interfaces/TvShow";
+import { Movie, TvShow } from "../interfaces";
+
 
 export const personDetailsData = {
   profile_path: "/tTWRomgIMOoIB3CJLPlVbqSawEm.jpg",

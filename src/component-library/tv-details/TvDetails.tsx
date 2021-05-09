@@ -1,5 +1,5 @@
 import React from "react";
-import TvShow from "../../interfaces/TvShow";
+import { TvShow } from "../../interfaces";
 import getGenres from "../../utils/getGenres";
 import styles from "./tv-details.module.scss";
 
