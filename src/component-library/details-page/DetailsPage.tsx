@@ -1,9 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { MovieDetails, PersonDetails, TvDetails } from "..";
-import Movie from "../../interfaces/Movie";
-import Person from "../../interfaces/Person";
-import TvShow from "../../interfaces/TvShow";
+import { Movie, Person, TvShow } from "../../interfaces";
 
 export const DetailsPage = () => {
   const state = useLocation().state as any;

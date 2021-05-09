@@ -1,5 +1,5 @@
 import React from "react";
-import Person from "../../interfaces/Person";
+import {Person} from "../../interfaces";
 import styles from "./person-details.module.scss";
 
 export interface PersonDetailsProps {

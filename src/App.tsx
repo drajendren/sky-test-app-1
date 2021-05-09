@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import "./App.scss";
 import config from "./config";
@@ -21,7 +21,7 @@ function App() {
     {} as SearchResponse
   );
 
-  const multiSearchApi = () => {
+  const multiSearchApi = useCallback(() => {
     axios
       .get<SearchResponse>(
         `${config.baseUrl}search/multi?api_key=${
@@ -45,7 +45,7 @@ function App() {
         setLoading(false);
       });
     return { searchResponse, loading, error };
-  };
+  },[error, loading, searchResponse, searchValue]);
 
   const onSearch = () => {
     history.push("/home");
@@ -61,7 +61,7 @@ function App() {
     } else {
       setSearchSuggestionResponse({} as SearchResponse);
     }
-  }, [searchValue]);
+  }, [searchValue, multiSearchApi]);
 
   return (
     <div className="App">

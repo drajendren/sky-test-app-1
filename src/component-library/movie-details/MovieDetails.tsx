@@ -1,5 +1,5 @@
 import React from "react";
-import Movie from "../../interfaces/Movie";
+import { Movie } from "../../interfaces";
 import getGenres from "../../utils/getGenres";
 import styles from "./movie-details.module.scss";
 

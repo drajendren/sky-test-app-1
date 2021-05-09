@@ -1,7 +1,7 @@
 import Movie from "../interfaces/Movie";
 import TvShow from "../interfaces/TvShow";
 
-export const personDetails = {
+export const personDetailsData = {
   profile_path: "/tTWRomgIMOoIB3CJLPlVbqSawEm.jpg",
   adult: true,
   id: 123,
@@ -46,7 +46,7 @@ export const personDetails = {
   name: "test Person",
 };
 
-export const movieDetails = {
+export const movieDetailsData = {
 adult: false,
 backdrop_path: "/kWYfW2Re0rUDE6IHhy4CRuKWeFr.jpg",
 genre_ids: [

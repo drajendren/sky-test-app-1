@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { ResultContainer } from "..";
-import Movie from "../../interfaces/Movie";
-import Person from "../../interfaces/Person";
-import TvShow from "../../interfaces/TvShow";
+import { Movie, Person, TvShow } from "../../interfaces";
 import styles from "./results.module.scss";
 
 export interface ResultsProps {
@@ -12,7 +10,7 @@ export const Results = (props: ResultsProps) => {
   const { results } = props;
   const [selectedFilter, setSelectedFilter] = useState("All");
   const [resultsState, setResultsState] = useState(results);
-  const filterResults = () => {
+  const filterResults = useCallback(() => {
     if (selectedFilter === "Movies") {
       setResultsState(
         results.filter((result) => result.media_type === "movie")
@@ -26,11 +24,11 @@ export const Results = (props: ResultsProps) => {
     } else {
       setResultsState(results);
     }
-  };
+  },[results, selectedFilter]);
 
   useEffect(() => {
     filterResults();
-  }, [selectedFilter]);
+  }, [selectedFilter, filterResults]);
 
   return (
     <>

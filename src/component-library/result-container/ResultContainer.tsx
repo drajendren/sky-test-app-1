@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Movie from "../../interfaces/Movie";
-import Person from "../../interfaces/Person";
-import TvShow from "../../interfaces/TvShow";
+import { Movie, Person, TvShow } from "../../interfaces";
 import styles from "./result-container.module.scss";
 
 export interface ResultsContainerProps {
